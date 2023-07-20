@@ -33,7 +33,7 @@ Additionally, we use a heart icon from Feather Icons for our like button, and cr
 
 - [Tailwind docs](https://tailwindcss.com/)
 - [Feather Icons](https://feathericons.com/)
-- [GitHub Logo](http://github.com/logos
+- [GitHub Logo](http://github.com/logos)
 
 ---
 

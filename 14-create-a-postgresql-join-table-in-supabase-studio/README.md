@@ -25,7 +25,7 @@
 
 **[📹 Video](TODO)**
 
-In this lesson, we create a PostgreSQL join table for `likes`. This has a many-to-many relationship between the `profiles` and `tweets` table, allowing us to store each instance of a like between a user and a tweet.
+In this lesson, we create a PostgreSQL join table for `likes` in the [Supabase](https://supabase.com) dashboard. This has a many-to-many relationship between the `profiles` and `tweets` table, allowing us to store each instance of a like between a user and a tweet.
 
 Additionally, we create Row Level Security (RLS) polices to enable `select`, `insert` and `delete`.
 
