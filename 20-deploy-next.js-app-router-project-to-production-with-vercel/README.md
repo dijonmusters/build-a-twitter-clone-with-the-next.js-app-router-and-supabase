@@ -25,19 +25,19 @@
 
 **[📹 Video](TODO)**
 
-TODO
+[Vercel](https://vercel.com) is a hosting platform that works very well with [Next.js](https://nextjs.org) - because it's their framework! In this lesson, we prepare our project to be deployed to production by:
 
-## Code Snippets
-
-**TODO**
-
-```js
-TODO
-```
+- Pushing code to [GitHub](https://github.com/)
+- Deploying repo to [Vercel](https://vercel.com)
+- Updating [GitHub OAuth app](https://github.com/settings/developers) to use production URL
+- Updating [Supabase](https://supabase.com/) project to use production URL
 
 ## Resources
 
-- [TODO](TODO)
+- [Deploy Next.js to Vercel guide](https://nextjs.org/learn/basics/deploying-nextjs-app/deploy)
+- [GitHub OAuth App settings](https://github.com/settings/developers)
+- [Vercel](https://vercel.com)
+- [Supabase URL configuration](https://app.supabase.com/project/_/auth/url-configuration)
 
 ---
 

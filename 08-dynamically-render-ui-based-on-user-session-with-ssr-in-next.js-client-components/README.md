@@ -25,19 +25,26 @@
 
 **[📹 Video](TODO)**
 
-TODO
+The first render of a Client Component happens on the server. This is called Server-side rendering (SSR). However, Client Components are synchronous, so they cannot suspend rendering while fetching data - such as the user's session. This means we either need to display a loading spinner or render the logged out state, while fetching that async data, causing a flash of incorrect state for the user.
+
+In this lesson, we look at rendering a Client Component from a Server Component that can asynchronously fetch the user's [Supabase](https://supabase.com/) session, and pass it as a prop to the Client Component, making the user's session available on its first SSR render.
 
 ## Code Snippets
 
-**TODO**
+**Render Client Component from Server Component**
 
-```js
-TODO
+```tsx
+const {
+  data: { session },
+} = await supabase.auth.getSession();
+
+return <ClientComponent session={session} />;
 ```
 
 ## Resources
 
-- [TODO](TODO)
+- [Client and Server Components docs](https://nextjs.org/docs/getting-started/react-essentials)
+- [Supabase Auth Helpers for Next.js docs](https://supabase.com/docs/guides/auth/auth-helpers/nextjs)
 
 ---
 

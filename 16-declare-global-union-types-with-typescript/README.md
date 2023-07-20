@@ -25,19 +25,33 @@
 
 **[📹 Video](TODO)**
 
-TODO
+[TypeScript](https://www.typescriptlang.org/) reduces runtime errors and makes code more maintainable. In this lesson, we use the [Supabase](https://supabase.com/) CLI to introspect our PostgreSQL schema and generate TypeScript definitions.
+
+Additionally, we resolve a collection of TypeScript errors and create a custom union type for our transformed tweets - making it globally available throughout our Next.js application.
 
 ## Code Snippets
 
-**TODO**
+**Custom type for TweetWithAuthor**
 
-```js
-TODO
+```tsx
+type TweetWithAuthor = Tweet & {
+  author: Profile;
+  likes: number;
+  user_has_liked_tweet: boolean;
+};
+```
+
+**Generate TypeScript definitions**
+
+```bash
+npx supabase gen types typescript --project-id your-project-id > lib/database.types.ts
 ```
 
 ## Resources
 
-- [TODO](TODO)
+- [TypeScript docs](https://www.typescriptlang.org/)
+- [Supabase CLI](https://supabase.com/docs/guides/cli)
+- [Generating TypeScript definitions](https://supabase.com/docs/guides/api/rest/generating-types)
 
 ---
 

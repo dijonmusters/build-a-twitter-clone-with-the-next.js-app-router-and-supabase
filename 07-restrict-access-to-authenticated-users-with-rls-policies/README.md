@@ -25,19 +25,27 @@
 
 **[📹 Video](TODO)**
 
-TODO
+Since we're using [Supabase](https://supabase.com/) to authenticate our users, it knows who our user is throughout the rest of the Supabase environment.
+
+In this lesson, we modify our Row Level Security (RLS) policy to only apply to the `authenticated` role to ensure that only authenticated users can select tweets.
+
+Additionally, we use the `useRouter` hook and `router.refresh()` to run our Server Component again and fetch fresh data from Supabase, after the user signs in or out.
 
 ## Code Snippets
 
-**TODO**
+**Enable authenticated read access with RLS policy**
 
-```js
-TODO
+```sql
+create policy "anyone can select tweets" ON "public"."tweets"
+as permissive for select
+to authenticated
+using (true);
 ```
 
 ## Resources
 
-- [TODO](TODO)
+- [Row Level Security docs](https://supabase.com/docs/guides/auth/row-level-security)
+- [useRouter hook](https://nextjs.org/docs/app/api-reference/functions/use-router#userouter)
 
 ---
 

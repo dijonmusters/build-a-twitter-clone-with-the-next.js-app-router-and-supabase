@@ -25,19 +25,60 @@
 
 **[📹 Video](TODO)**
 
-TODO
+In this lesson, we create a PostgreSQL join table for `likes`. This has a many-to-many relationship between the `profiles` and `tweets` table, allowing us to store each instance of a like between a user and a tweet.
+
+Additionally, we create Row Level Security (RLS) polices to enable `select`, `insert` and `delete`.
 
 ## Code Snippets
 
-**TODO**
+**Create likes table**
 
-```js
-TODO
+```sql
+create table public.likes (
+  id uuid default gen_random_uuid() primary key,
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null,
+  user_id uuid references public.profiles on delete cascade not null,
+  tweet_id uuid references public.tweets on delete cascade not null
+);
+```
+
+**Enable Row Level Security**
+
+```sql
+alter table public.likes enable row level security;
+```
+
+**Enable insert action with RLS policy**
+
+```sql
+create policy "authenticated users can insert their own likes" ON "public"."likes"
+as permissive for select
+to authenticated
+using (user_id = auth.uid());
+```
+
+**Enable delete action with RLS policy**
+
+```sql
+create policy "authenticated users can delete their own likes" ON "public"."likes"
+as permissive for delete
+to authenticated
+using (user_id = auth.uid());
+```
+
+**Enable select action with RLS policy**
+
+```sql
+create policy "authenticated users can select likes" ON "public"."likes"
+as permissive for select
+to authenticated
+using (true);
 ```
 
 ## Resources
 
-- [TODO](TODO)
+- [Managing user data docs](https://supabase.com/docs/guides/auth/managing-user-data)
+- [Row Level Security docs](https://supabase.com/docs/guides/auth/row-level-security)
 
 ---
 

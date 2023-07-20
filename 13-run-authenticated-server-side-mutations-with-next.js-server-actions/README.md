@@ -25,19 +25,51 @@
 
 **[📹 Video](TODO)**
 
-TODO
+[Server Actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions) are a way to perform server-side mutations in the [Next.js App Router](https://nextjs.org/docs/app). In this lesson, we create a `<NewTweet />` component that renders a form for the user to enter a new tweet. This form is submitted to a Server Action, which writes this data to [Supabase](https://supabase.com/).
+
+Additionally, we create a Server Action Supabase client and call the `getUser` function to fetch the currently signed in user.
+
+Lastly, we write a Row Level Security (RLS) policy to enable the `insert` action for `authenticated` users.
 
 ## Code Snippets
 
-**TODO**
+**Posting form to Server Action**
 
-```js
-TODO
+```tsx
+export default function NewTweet() {
+  const addTweet = async () => {
+    "use server";
+  };
+
+  return <form action={addTweet}>...</form>;
+}
+```
+
+**Create Supabase client in Server Action**
+
+```tsx
+const supabase = createServerActionClient<Database>({ cookies });
+```
+
+**Get user from Supabase client**
+
+```tsx
+const {
+  data: { user },
+} = await supabase.auth.getUser();
+```
+
+**Insert tweet with Supabase**
+
+```tsx
+await supabase.from("tweets").insert({...});
 ```
 
 ## Resources
 
-- [TODO](TODO)
+- [Server Action docs](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions)
+- [Supabase Auth Helpers for Next.js](https://supabase.com/docs/guides/auth/auth-helpers/nextjs)
+- [Inserting data with supabase-js](https://supabase.com/docs/reference/javascript/insert)
 
 ---
 

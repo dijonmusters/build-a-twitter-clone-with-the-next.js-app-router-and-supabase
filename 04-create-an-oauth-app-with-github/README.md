@@ -25,19 +25,11 @@
 
 **[📹 Video](TODO)**
 
-TODO
-
-## Code Snippets
-
-**TODO**
-
-```js
-TODO
-```
+[Supabase](https://supabase.com/) includes many ways to authenticate users - Email and password, magic link, mobile OTP etc. In this lesson we implement social login with GitHub by registering a new OAuth Application and providing Supabase with the Client ID and Secret.
 
 ## Resources
 
-- [TODO](TODO)
+- [Supabase guide to Login with GitHub](https://supabase.com/docs/guides/auth/social-login/auth-github)
 
 ---
 

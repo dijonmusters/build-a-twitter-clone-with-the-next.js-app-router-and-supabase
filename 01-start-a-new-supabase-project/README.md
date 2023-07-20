@@ -25,19 +25,36 @@
 
 **[📹 Video](TODO)**
 
-TODO
+[Supabase](https://supabase.com/) is a collection of open source tools that wrap around a PostgreSQL database - Hosting, Auth, Realtime, File Storage, Edge Functions etc. In this lesson, we go to [database.new](https://database.new) to create a free Supabase project.
+
+Additionally, we create a `tweets` table and populate it with some seed data.
 
 ## Code Snippets
 
-**TODO**
+**Create a `tweets` table**
 
-```js
-TODO
+```sql
+create table if not exists tweets (
+  id uuid default gen_random_uuid() primary key,
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null,
+  title text not null
+);
+```
+
+**Insert tweets**
+
+```sql
+insert into tweets(title)
+values
+  ('first tweet'),
+  ('second tweet'),
+  ('third tweet');
 ```
 
 ## Resources
 
-- [TODO](TODO)
+- [Supabase docs](https://supabase.com/docs)
+- [Supabase SQL Editor](https://app.supabase.com/project/_/sql)
 
 ---
 

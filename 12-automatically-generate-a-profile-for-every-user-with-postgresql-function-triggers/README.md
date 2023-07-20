@@ -25,19 +25,73 @@
 
 **[📹 Video](TODO)**
 
-TODO
+[Supabase](https://supabase.com/) has an `auth.users` table that contains information about our user and their session. We want to display the user's name, username and avatar alongside their tweets, but the `auth.users` table cannot be publicly accessible, as it contains sensitive information.
+
+In this lesson, we create a new table called `profiles` and populate it with the data we want to display from the `auth.users` table. Additionally, we set up a PostgreSQL Function and Trigger to create a new profile for any user added to the `auth.users` table.
+
+Lastly, we create an RLS policy for the `profiles` table to enable read access, and re-generate our TypeScript definitions file to contain our new table.
 
 ## Code Snippets
 
-**TODO**
+**Create profiles table**
 
-```js
-TODO
+```sql
+create table public.profiles (
+  id uuid not null references auth.users on delete cascade primary key,
+  name text not null,
+  username text not null,
+  avatar_url text not null
+);
+```
+
+**Enable Row Level Security**
+
+```sql
+alter table public.profiles enable row level security;
+```
+
+**Enable read access with RLS policy**
+
+```sql
+create policy "anyone can select profiles" ON "public"."profiles"
+as permissive for select
+to public
+using (true);
+```
+
+**Create PostgreSQL Function to create profile**
+
+```sql
+create function public.create_profile_for_user()
+returns trigger
+language plpgsql
+security definer set search_path = public
+as $$
+begin
+  insert into public.profiles (id, name, username, avatar_url)
+  values (
+    new.id,
+    new.raw_user_meta_data->'name',
+    new.raw_user_meta_data->'user_name',
+    new.raw_user_meta_data->'avatar_url'
+  );
+  return new;
+end;
+$$;
+```
+
+**Create PostgreSQL Trigger to create profile**
+
+```sql
+create trigger on_auth_user_created
+  after insert on auth.users
+  for each row execute procedure public.create_profile_for_user();
 ```
 
 ## Resources
 
-- [TODO](TODO)
+- [Managing user data docs](https://supabase.com/docs/guides/auth/managing-user-data)
+- [Row Level Security docs](https://supabase.com/docs/guides/auth/row-level-security)
 
 ---
 

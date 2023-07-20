@@ -25,19 +25,25 @@
 
 **[📹 Video](TODO)**
 
-TODO
+[Next.js](https://nextjs.org/) is a full-stack React framework that provides the client and server building blocks to create powerful web applications. In this lesson we run the `create-next-app` CLI command to create a new Next.js application, configured with:
+
+- [App Router](https://nextjs.org/docs)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ## Code Snippets
 
-**TODO**
+**Create Next.js app**
 
-```js
-TODO
+```bash
+npx create-next-app blue-bird
 ```
 
 ## Resources
 
-- [TODO](TODO)
+- [Next.js App Router docs](https://nextjs.org/docs)
+- [TypeScript docs](https://www.typescriptlang.org/)
+- [Tailwind CSS docs](https://tailwindcss.com/)
 
 ---
 

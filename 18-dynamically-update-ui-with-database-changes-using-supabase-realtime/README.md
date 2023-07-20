@@ -25,19 +25,35 @@
 
 **[📹 Video](TODO)**
 
-TODO
+[Supabase](https://supabase.com/) allows us to subscribe to changes in the database, and update our UI, without the user needing to refresh the page. In this lesson, we create a subscription for `postgres_changes`, listening for any change events - insert, update or delete - on our tweets table.
+
+Additionally, we call the `router.refresh()` function to re-run our Server Components, fetching fresh data from Supabase.
 
 ## Code Snippets
 
-**TODO**
+**Subscribe to database changes**
 
-```js
-TODO
+```tsx
+const channel = supabase
+  .channel("realtime tweets")
+  .on(
+    "postgres_changes",
+    {
+      event: "*",
+      schema: "public",
+      table: "tweets",
+    },
+    (payload) => {
+      router.refresh();
+    }
+  )
+  .subscribe();
 ```
 
 ## Resources
 
-- [TODO](TODO)
+- [Supabase Realtime docs](https://supabase.com/docs/guides/realtime)
+- [useRouter hook docs](https://nextjs.org/docs/app/api-reference/functions/use-router)
 
 ---
 

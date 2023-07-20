@@ -25,19 +25,38 @@
 
 **[📹 Video](TODO)**
 
-TODO
+[Supabase](https://supabase.com) includes multiple authentication strategies. In this lesson, we create a Supabase client to trigger the OAuth authentication flow with GitHub.
+
+Additionally, we discuss the differences between Client and Server Components in the [Next.js App Router](https://nextjs.org/docs/app):
+
+- Client Components: user interactivity
+- Server Components: data fetching
+
+Lastly, we create a Route Handler to exchange an authentication code from GitHub for their Supabase session.
 
 ## Code Snippets
 
-**TODO**
+**Authenticate with GitHub OAuth**
 
-```js
-TODO
+```tsx
+await supabase.auth.signInWithOAuth({
+  provider: "github",
+  options: {
+    redirectTo: "http://localhost:3000/auth/callback",
+  },
+});
+```
+
+**Exchange code for Supabase session**
+
+```tsx
+await supabase.auth.exchangeCodeForSession(code);
 ```
 
 ## Resources
 
-- [TODO](TODO)
+- [Supabase Auth Helper docs](https://supabase.com/docs/guides/auth/auth-helpers/nextjs)
+- [Next.js App Router docs](https://nextjs.org/docs/app)
 
 ---
 

@@ -25,19 +25,32 @@
 
 **[📹 Video](TODO)**
 
-TODO
+[Supabase](https://supabase.com/) uses the `auth.users` table to store information about our users and their sessions. In this lesson, we add a column to the `tweets` table to associate each tweet with one of our users.
+
+Additionally, we set up cascading deletes, so when a user is deleted from the `auth.users` table, their tweets are also deleted.
+
+Lastly, because our database schema has changed, our TypeScript definitions are now incorrect. Therefore, we use the Supabase CLI to introspect our PostgreSQL schema and create a new `database.types.ts` file.
 
 ## Code Snippets
 
-**TODO**
+**Add foreign key relationship to auth.users**
 
-```js
-TODO
+```sql
+alter table public.tweets
+add user_id uuid references auth.users on delete cascade not null;
+```
+
+**Generate TypeScript definitions**
+
+```bash
+npx supabase gen types typescript --project-id your-project-id > lib/database.types.ts
 ```
 
 ## Resources
 
-- [TODO](TODO)
+- [Supabase Auth docs](https://supabase.com/docs/guides/auth)
+- [Supabase CLI](https://supabase.com/docs/guides/cli)
+- [Generating TypeScript definitions](https://supabase.com/docs/guides/api/rest/generating-types)
 
 ---
 

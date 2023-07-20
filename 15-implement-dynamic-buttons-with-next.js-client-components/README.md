@@ -25,19 +25,26 @@
 
 **[📹 Video](TODO)**
 
-TODO
+In this lesson, we create a new component to display the likes from [Supabase](https://supabase.com/). This component will be interactive so it needs to be a Client Component.
+
+Additionally, we extend our Supabase query for `tweets`, and join the columns from our `likes` table.
+
+Lastly, we make this button dynamic by checking whether the user has previously liked this tweet. If they have not, we increment the likes by 1, otherwise, we decrement them by 1.
 
 ## Code Snippets
 
-**TODO**
+**Querying data across tables**
 
-```js
-TODO
+```tsx
+const { data } = await supabase
+  .from("tweets")
+  .select("*, profiles(*), likes(*)");
 ```
 
 ## Resources
 
-- [TODO](TODO)
+- [Client Component docs](https://nextjs.org/docs/getting-started/react-essentials#client-components)
+- [Querying across tables with supabase-js](https://supabase.com/docs/reference/javascript/select)
 
 ---
 

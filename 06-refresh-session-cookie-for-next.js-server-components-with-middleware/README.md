@@ -25,19 +25,23 @@
 
 **[📹 Video](TODO)**
 
-TODO
+Server Components cannot set cookies in the [Next.js App Router](https://nextjs.org/docs/app). In this lesson, we implement middleware to refresh expired [Supabase](https://supabase.com/) sessions.
+
+[Middleware](https://nextjs.org/docs/app/building-your-application/routing/middleware) runs immediately before the route is loaded. By using it to refresh our user's session, we ensure it is valid by the time it loads the Server Component and attempts to fetch data from Supabase.
 
 ## Code Snippets
 
-**TODO**
+**Refresh expired sessions**
 
-```js
-TODO
+```tsx
+supabase.auth.getSession();
 ```
 
 ## Resources
 
-- [TODO](TODO)
+- [Supabase Auth Helper docs](https://supabase.com/docs/guides/auth/auth-helpers/nextjs)
+- [Next.js App Router docs](https://nextjs.org/docs/app)
+- [Next.js Middleware](https://nextjs.org/docs/app/building-your-application/routing/middleware)
 
 ---
 

@@ -25,19 +25,32 @@
 
 **[📹 Video](TODO)**
 
-TODO
+[Typescript](https://www.typescriptlang.org/) reduces runtime errors and makes our code more maintainable. [Supabase](https://supabase.com/) allows us to introspect our PostgreSQL schema and generate TypeScript definitions.
+
+In this lesson we generate an access token to use the [Supabase CLI](https://supabase.com/docs/guides/cli) and generate TypeScript definitions. Additionally, we write our types to a file, which can be passed to our Supabase client, giving our application full type-safety across client, server and database.
+
+Lastly, we make our Database types globally available so we don't need to import them every time we create a Supabase client.
 
 ## Code Snippets
 
-**TODO**
+**Login to Supabase CLI**
 
-```js
-TODO
+```bash
+npx supabase login
+```
+
+**Generate TS definitions file**
+
+```bash
+npx supabase gen types typescript --project-id your-project-id > lib/database.types.ts
 ```
 
 ## Resources
 
-- [TODO](TODO)
+- [Generate Supabase access token](https://app.supabase.com/account/tokens)
+- [TypeScript docs](https://www.typescriptlang.org/)
+- [Supabase CLI](https://supabase.com/docs/guides/cli)
+- [Generating TypeScript definitions](https://supabase.com/docs/guides/api/rest/generating-types)
 
 ---
 

@@ -25,19 +25,27 @@
 
 **[📹 Video](TODO)**
 
-TODO
+Since [Supabase](https://supabase.com/) requires our user to be authenticated to fetch tweets, it doesn't make sense for an unauthenticated user to visit the landing page. In this lesson, we implement protected routes that are only accessible to authenticated users.
+
+Additionally, we create a `/login` route to redirect unauthenticated users, which allows them to sign in with GitHub.
 
 ## Code Snippets
 
-**TODO**
+**Redirect unauthenticated users**
 
-```js
-TODO
+```tsx
+const {
+  data: { session },
+} = await supabase.auth.getSession();
+
+if (!session) {
+  redirect("/login");
+}
 ```
 
 ## Resources
 
-- [TODO](TODO)
+- [Supabase Auth Helpers for Next.js docs](https://supabase.com/docs/guides/auth/auth-helpers/nextjs)
 
 ---
 

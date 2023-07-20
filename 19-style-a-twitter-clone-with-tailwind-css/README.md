@@ -25,19 +25,15 @@
 
 **[📹 Video](TODO)**
 
-TODO
+[Tailwind](https://tailwindcss.com/) is an atomic CSS framework that makes styling an application more consistent and maintainable. In this lesson, we look at building out a similar UI to Twitter using only Tailwind classes.
 
-## Code Snippets
-
-**TODO**
-
-```js
-TODO
-```
+Additionally, we use a heart icon from Feather Icons for our like button, and create a new `<GitHubButton />` component that displays a nicely styled GitHub logo to trigger the user authentication flow.
 
 ## Resources
 
-- [TODO](TODO)
+- [Tailwind docs](https://tailwindcss.com/)
+- [Feather Icons](https://feathericons.com/)
+- [GitHub Logo](http://github.com/logos
 
 ---
 

@@ -25,19 +25,35 @@
 
 **[📹 Video](TODO)**
 
-TODO
+"Optimistic UI" is a pattern for updating the page immediately with the data you have available, rather than waiting for the database query to resolve. In this lesson, we use React's `useOptimistic` hook to create an array of tweets that we can instantly update with our new state, when the user clicks the like button.
 
 ## Code Snippets
 
-**TODO**
+**Call useOptimistic hook**
 
-```js
-TODO
+```tsx
+const [optimisticState, addOptimisticState] = useOptimistic(
+  initialState,
+  (currentState, newState) => {
+    // merge state
+    // return new state
+  }
+);
+```
+
+**Add optimistic tweet**
+
+```tsx
+addOptimisticTweet({
+  ...tweet,
+  likes: tweet.likes - 1,
+  user_has_liked_tweet: !tweet.user_has_liked_tweet,
+});
 ```
 
 ## Resources
 
-- [TODO](TODO)
+- [useOptimistic hook](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions#enhancements)
 
 ---
 

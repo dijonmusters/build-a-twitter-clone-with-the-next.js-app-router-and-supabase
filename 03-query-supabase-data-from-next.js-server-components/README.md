@@ -25,19 +25,66 @@
 
 **[📹 Video](TODO)**
 
-TODO
+Our [Supabase](https://supabase.com) project is a hosted PostgreSQL database. In this lesson, we install the [Supabase Auth Helpers](https://www.npmjs.com/package/@supabase/auth-helpers-nextjs) and [Supabase.js](https://www.npmjs.com/package/@supabase/supabase-js) npm packages, and configure environment variables to query data from Supabase:
+
+```
+NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+```
+
+These values can be found in [your Supabase project's API Settings](https://app.supabase.com/project/_/settings/api).
+
+Additionally, we create a new Supabase instance using the `createServerComponentClient` function, then make our Server Component Async and suspend its rendering until our request for Supabase data resolves.
+
+Lastly, we implement a Row Level Security (RLS) policy to enable read access for the `tweets` table.
 
 ## Code Snippets
 
-**TODO**
+**Install Supabase packages**
 
-```js
-TODO
+```bash
+npm i @supabase/auth-helpers-nextjs @supabase/supabase-js
+```
+
+**Import createServerComponentClient function**
+
+```tsx
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
+```
+
+**Create Supabase client in Server Component**
+
+```tsx
+const supabase = createServerComponentClient({ cookies });
+```
+
+**Fetch data from Supabase**
+
+```tsx
+const { data: tweets } = await supabase.from("tweets").select();
+```
+
+**Pretty print data with JSON.stringify**
+
+```tsx
+<pre>{JSON.stringify(tweets, null, 2)}</pre>
+```
+
+**Enable read access with RLS policy**
+
+```sql
+create policy "anyone can select tweets" ON "public"."tweets"
+as permissive for select
+to public
+using (true);
 ```
 
 ## Resources
 
-- [TODO](TODO)
+- [Supabase Auth Helpers for Next.js](https://supabase.com/docs/guides/auth/auth-helpers/nextjs)
+- [Supabase.js docs](https://supabase.com/docs/reference/javascript/installing)
+- [Row Level Security](https://supabase.com/docs/guides/auth/row-level-security)
 
 ---
 
