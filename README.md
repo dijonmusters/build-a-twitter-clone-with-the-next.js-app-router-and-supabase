@@ -1,10 +1,10 @@
-# [Build a Twitter clone with the Next.js App Router and Supabase](TODO?af=9qsk0a)
+# [Build a Twitter clone with the Next.js App Router and Supabase](https://egghead.io/courses/build-a-twitter-clone-with-the-next-js-app-router-and-supabase-19bebadb?af=9qsk0a)
 
-<a href="TODO?af=9qsk0a">
-  <img src="TODO?af=9qsk0a" alt="Build a Twitter clone with the Next.js App Router and Supabase" width="100%" />
+<a href="https://egghead.io/courses/build-a-twitter-clone-with-the-next-js-app-router-and-supabase-19bebadb?af=9qsk0a">
+  <img src="https://egghead.io/_next/image?url=https%3A%2F%2Fd2eip9sf3oo6c2.cloudfront.net%2Fplaylists%2Fsquare_covers%2F001%2F104%2F993%2Ffull%2Ftwitter_clone.png&w=1080&q=100" alt="Build a Twitter clone with the Next.js App Router and Supabase" width="100%" />
 </a>
 
-> This repo accompanies this [free egghead course](TODO?af=9qsk0a).
+> This repo accompanies this [free egghead course](https://egghead.io/courses/build-a-twitter-clone-with-the-next-js-app-router-and-supabase-19bebadb?af=9qsk0a).
 
 ## 🔍 About
 
