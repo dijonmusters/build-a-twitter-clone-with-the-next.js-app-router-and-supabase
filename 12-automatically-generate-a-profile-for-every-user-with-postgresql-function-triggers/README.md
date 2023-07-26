@@ -23,7 +23,7 @@
 
 # Automatically generate a profile for every user with PostgreSQL Function Triggers
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/postgresql-automatically-generate-a-profile-for-every-user-with-postgresql-function-triggers)**
 
 [Supabase](https://supabase.com/) has an `auth.users` table that contains information about our user and their session. We want to display the user's name, username and avatar alongside their tweets, but the `auth.users` table cannot be publicly accessible, as it contains sensitive information.
 

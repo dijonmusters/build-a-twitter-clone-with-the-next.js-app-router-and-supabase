@@ -23,7 +23,7 @@
 
 # Dynamically render UI based on user session with SSR in Next.js Client Components
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/supabase-dynamically-render-ui-based-on-user-session-with-ssr-in-next-js-client-components)**
 
 The first render of a Client Component happens on the server. This is called Server-side rendering (SSR). However, Client Components are synchronous, so they cannot suspend rendering while fetching data - such as the user's session. This means we either need to display a loading spinner or render the logged out state, while fetching that async data, causing a flash of incorrect state for the user.
 

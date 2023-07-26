@@ -23,7 +23,7 @@
 
 # Declare global union types with Typescript
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/supabase-declare-global-union-types-for-transformed-supabase-data-with-typescript)**
 
 [TypeScript](https://www.typescriptlang.org/) reduces runtime errors and makes code more maintainable. In this lesson, we use the [Supabase](https://supabase.com/) CLI to introspect our PostgreSQL schema and generate TypeScript definitions.
 

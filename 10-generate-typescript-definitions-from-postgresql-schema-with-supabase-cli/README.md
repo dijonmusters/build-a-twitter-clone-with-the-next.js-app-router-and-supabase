@@ -23,7 +23,7 @@
 
 # Generate TypeScript definitions from PostgreSQL schema with Supabase CLI
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/supabase-generate-typescript-definitions-from-postgresql-schema-with-supabase-cli)**
 
 [Typescript](https://www.typescriptlang.org/) reduces runtime errors and makes our code more maintainable. [Supabase](https://supabase.com/) allows us to introspect our PostgreSQL schema and generate TypeScript definitions.
 

@@ -23,7 +23,7 @@
 
 # Implement dynamic buttons with Next.js Client Components
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/supabase-implement-dynamic-buttons-with-next-js-client-components)**
 
 In this lesson, we create a new component to display the likes from [Supabase](https://supabase.com/). This component will be interactive so it needs to be a Client Component.
 

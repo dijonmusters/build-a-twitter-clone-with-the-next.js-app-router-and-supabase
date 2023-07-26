@@ -23,7 +23,7 @@
 
 # Style a Twitter clone with Tailwind CSS
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/tailwind-style-a-twitter-clone-with-tailwind-css)**
 
 [Tailwind](https://tailwindcss.com/) is an atomic CSS framework that makes styling an application more consistent and maintainable. In this lesson, we look at building out a similar UI to Twitter using only Tailwind classes.
 

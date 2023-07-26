@@ -23,7 +23,7 @@
 
 # Refresh session cookie for Next.js Server Components with Middleware
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/supabase-refresh-session-cookie-for-next-js-server-components-with-middleware)**
 
 Server Components cannot set cookies in the [Next.js App Router](https://nextjs.org/docs/app). In this lesson, we implement middleware to refresh expired [Supabase](https://supabase.com/) sessions.
 

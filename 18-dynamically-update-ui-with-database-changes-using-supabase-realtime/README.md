@@ -23,7 +23,7 @@
 
 # Dynamically update UI with Database changes using Supabase Realtime
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/next-js-dynamically-update-ui-with-database-changes-using-supabase-realtime)**
 
 [Supabase](https://supabase.com/) allows us to subscribe to changes in the database, and update our UI, without the user needing to refresh the page. In this lesson, we create a subscription for `postgres_changes`, listening for any change events - insert, update or delete - on our tweets table.
 

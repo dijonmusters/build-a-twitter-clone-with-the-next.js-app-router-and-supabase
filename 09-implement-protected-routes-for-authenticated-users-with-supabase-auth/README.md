@@ -23,7 +23,7 @@
 
 # Implement Protected Routes for authenticated users with Supabase Auth
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/supabase-implement-protected-routes-for-authenticated-users-with-supabase-auth)**
 
 Since [Supabase](https://supabase.com/) requires our user to be authenticated to fetch tweets, it doesn't make sense for an unauthenticated user to visit the landing page. In this lesson, we implement protected routes that are only accessible to authenticated users.
 

@@ -23,7 +23,7 @@
 
 # Implement Optimistic UI with the Next.js useTransition hook
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/next-js-implement-optimistic-ui-with-the-react-useoptimistic-hook-in-next-js)**
 
 "Optimistic UI" is a pattern for updating the page immediately with the data you have available, rather than waiting for the database query to resolve. In this lesson, we use React's `useOptimistic` hook to create an array of tweets that we can instantly update with our new state, when the user clicks the like button.
 

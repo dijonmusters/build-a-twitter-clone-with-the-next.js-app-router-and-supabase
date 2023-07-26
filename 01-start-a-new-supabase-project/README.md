@@ -23,7 +23,7 @@
 
 # Start a new Supabase project
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/postgresql-create-a-new-supabase-project-and-basic-postgresql-schema)**
 
 [Supabase](https://supabase.com/) is a collection of open source tools that wrap around a PostgreSQL database - Hosting, Auth, Realtime, File Storage, Edge Functions etc. In this lesson, we go to [database.new](https://database.new) to create a free Supabase project.
 

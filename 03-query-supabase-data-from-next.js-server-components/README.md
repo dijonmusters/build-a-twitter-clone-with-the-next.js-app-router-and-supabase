@@ -23,7 +23,7 @@
 
 # Query Supabase data from Next.js Server Components
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/next-js-query-supabase-data-from-next-js-server-components)**
 
 Our [Supabase](https://supabase.com) project is a hosted PostgreSQL database. In this lesson, we install the [Supabase Auth Helpers](https://www.npmjs.com/package/@supabase/auth-helpers-nextjs) and [Supabase.js](https://www.npmjs.com/package/@supabase/supabase-js) npm packages, and configure environment variables to query data from Supabase:
 

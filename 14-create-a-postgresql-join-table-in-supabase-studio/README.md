@@ -23,7 +23,7 @@
 
 # Create a PostgreSQL join table in Supabase Studio
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/postgresql-create-a-postgresql-join-table-in-supabase-studio)**
 
 In this lesson, we create a PostgreSQL join table for `likes` in the [Supabase](https://supabase.com) dashboard. This has a many-to-many relationship between the `profiles` and `tweets` table, allowing us to store each instance of a like between a user and a tweet.
 

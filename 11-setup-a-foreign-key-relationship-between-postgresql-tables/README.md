@@ -23,7 +23,7 @@
 
 # Setup a Foreign Key relationship between PostgreSQL tables
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/postgresql-setup-a-foreign-key-relationship-between-postgresql-tables)**
 
 [Supabase](https://supabase.com/) uses the `auth.users` table to store information about our users and their sessions. In this lesson, we add a column to the `tweets` table to associate each tweet with one of our users.
 

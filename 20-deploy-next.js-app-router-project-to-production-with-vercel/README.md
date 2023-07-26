@@ -23,7 +23,7 @@
 
 # Deploy Next.js App Router project to production with Vercel
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/deploy-next-js-app-router-project-to-production-with-vercel)**
 
 [Vercel](https://vercel.com) is a hosting platform that works very well with [Next.js](https://nextjs.org) - because it's their framework! In this lesson, we prepare our project to be deployed to production by:
 

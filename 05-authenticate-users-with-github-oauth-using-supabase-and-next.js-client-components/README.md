@@ -23,7 +23,7 @@
 
 # Authenticate users with GitHub OAuth using Supabase and Next.js Client Components
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/supabase-authenticate-users-with-github-oauth-using-supabase-and-next-js-client-components)**
 
 [Supabase](https://supabase.com) includes multiple authentication strategies. In this lesson, we create a Supabase client to trigger the OAuth authentication flow with GitHub.
 

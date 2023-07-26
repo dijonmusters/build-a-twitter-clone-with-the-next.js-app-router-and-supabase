@@ -23,7 +23,7 @@
 
 # Run authenticated Server-side mutations with Next.js Server Actions
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/supabase-run-authenticated-server-side-mutations-with-next-js-server-actions)**
 
 [Server Actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions) are a way to perform server-side mutations in the [Next.js App Router](https://nextjs.org/docs/app). In this lesson, we create a `<NewTweet />` component that renders a form for the user to enter a new tweet. This form is submitted to a Server Action, which writes this data to [Supabase](https://supabase.com/).
 

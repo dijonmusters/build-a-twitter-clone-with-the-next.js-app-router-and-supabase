@@ -23,7 +23,7 @@
 
 # Restrict access to authenticated users with RLS policies
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/next-js-restrict-access-to-authenticated-users-with-supabase-rls-policies)**
 
 Since we're using [Supabase](https://supabase.com/) to authenticate our users, it knows who our user is throughout the rest of the Supabase environment.
 

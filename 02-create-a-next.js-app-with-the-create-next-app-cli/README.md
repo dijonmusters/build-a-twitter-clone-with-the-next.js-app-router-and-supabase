@@ -23,7 +23,7 @@
 
 # Create a Next.js app with the create-next-app CLI
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/next-js-create-a-next-js-app-with-the-create-next-app-cli)**
 
 [Next.js](https://nextjs.org/) is a full-stack React framework that provides the client and server building blocks to create powerful web applications. In this lesson we run the `create-next-app` CLI command to create a new Next.js application, configured with:
 

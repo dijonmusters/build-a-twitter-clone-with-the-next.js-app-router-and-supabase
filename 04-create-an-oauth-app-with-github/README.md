@@ -23,7 +23,7 @@
 
 # Create an OAuth app with GitHub
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/supabase-create-an-oauth-app-with-github)**
 
 [Supabase](https://supabase.com/) includes many ways to authenticate users - Email and password, magic link, mobile OTP etc. In this lesson we implement social login with GitHub by registering a new OAuth Application and providing Supabase with the Client ID and Secret.
 
